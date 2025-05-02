@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import pickle
+from sklearn.datasets import load_iris
 
 # --- Load trained model and scaler using pickle ---
 try:
@@ -12,6 +13,11 @@ try:
 except FileNotFoundError as e:
     st.error(f"❌ Error: {e}. Please ensure 'knn_model.pkl' and 'scaler.pkl' are in the app directory.")
     st.stop()
+
+# --- Load Iris dataset to get feature ranges and class names ---
+iris = load_iris()
+X = iris.data
+target_names = iris.target_names
 
 # --- Streamlit App UI ---
 st.set_page_config(page_title="Iris Classifier", layout="centered")
