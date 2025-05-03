@@ -35,6 +35,8 @@ To build and deploy a machine learning model that classifies iris flower species
 ---
 
 ## 🧪 How to Run Locally
+---
+[Access the Model Prediction Page](https://knnclassifieririsflowerprediction-t89hfhz5t2mhjjwhpr6gsj.streamlit.app/Model_Prediction)
 
 ### 1. Clone the Repo
 ```bash
